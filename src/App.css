@@ -9,14 +9,25 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #d1c3b9;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(17, 16, 31);
+}
+
+.App-body {
+  background-color: #f9f9f9;
+  color: #0c0c0c;
+}
+
+.App-footer {
+  height: 200px;
+  background-color: #001333;
+  color: #d1c3b9;
 }
 
 .App-link {
@@ -30,4 +41,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.body-text {
+
+}
+
+.card-wrapper {
+  background: #d1c3b9;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.card.card-wrapper:active, .card-wrapper:focus{
+  background: #001333;
+}
+
+.card {
+  background:;
 }
