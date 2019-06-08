@@ -1,7 +1,4 @@
 import  React, { Component } from 'react';
-import logo from './logo.svg';
-import { Nav } from 'react-bootstrap';
-
 import ProductTab from './ProductTab';
 
 import './App.css';
@@ -35,14 +32,14 @@ export default class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Nav variant="pills" className="nav nav-pills" defaultActiveKey="/home">
-            <Nav.Item role="presentation" className="active">
-              <Nav.Link href="/home">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item role="presentation" className="">
-              <Nav.Link href="/away">Away</Nav.Link>
-            </Nav.Item>
-          </Nav>
+          <ul variant="pills" className="nav nav-pills" defaultActiveKey="/home">
+            <li role="presentation" className="active">
+              <a href="/home">Home</a>
+            </li>
+            <li role="presentation" className="">
+              <a href="/away">Away</a>
+            </li>
+          </ul>
         </header>
         <body className="container App-body">
           <p className="body-text">
