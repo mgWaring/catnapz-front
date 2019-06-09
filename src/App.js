@@ -1,4 +1,4 @@
-import  React, { Component } from 'react';
+import React, { Component } from 'react';
 import ProductTab from './ProductTab';
 
 import './App.css';
@@ -7,24 +7,22 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      config : require('./config.json'),
+      config: require('./config.json'),
     }
-    console.log(this.state)
   }
 
   getProducts() {
     let array = [];
-    let obj = this.state.config.products;
-    for (const key in obj) {
-      let product = obj[key];      
+    let products = this.state.config.products;
+    for (const key in products) {
+      let product = products[key];
       console.log(product)
       //optional check for properties from prototype chain
-      if (obj.hasOwnProperty(key)) {
-        let entry = <ProductTab product={ product }/>
-        array.push(entry);     
+      if (products.hasOwnProperty(key)) {
+        let entry = <ProductTab key={key} product={product} />
+        array.push(entry);
       }
     }
-    console.log(array)
     return array
   }
 
@@ -32,7 +30,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <ul variant="pills" className="nav nav-pills" defaultActiveKey="/home">
+          <ul variant="pills" className="nav nav-pills" defaultactivekey="/home">
             <li role="presentation" className="active">
               <a href="/home">Home</a>
             </li>
@@ -41,12 +39,12 @@ export default class App extends Component {
             </li>
           </ul>
         </header>
-        <body className="container App-body">
+        <div className="container App-body">
           <p className="body-text">
             {this.state.config.blurb}
           </p>
           {this.getProducts()}
-        </body>
+        </div>
         <footer className="footer App-footer">
           <p> Created By Max Waring</p>
         </footer>

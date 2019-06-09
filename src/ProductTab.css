@@ -1,0 +1,9 @@
+.expanded { 
+  height: 800px;
+  background: linear-gradient(#ff7788,#228855);
+}
+
+.collapsed {
+  height: auto;
+  background: inherit;
+}
