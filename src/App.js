@@ -19,7 +19,7 @@ export default class App extends Component {
       console.log(product)
       //optional check for properties from prototype chain
       if (products.hasOwnProperty(key)) {
-        let entry = <ProductTab key={key} product={product} />
+        let entry = <ProductTab key={key} product_id={key} product={product} />
         array.push(entry);
       }
     }
@@ -29,24 +29,24 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <ul variant="pills" className="nav nav-pills" defaultactivekey="/home">
-            <li role="presentation" className="active">
-              <a href="/home">Home</a>
-            </li>
-            <li role="presentation" className="">
-              <a href="/away">Away</a>
-            </li>
-          </ul>
-        </header>
+        <div className="catnaps-header">
+          <img src={this.state.config.logoUrl} alt="CatNapz logo" width="100" height="100" className="catnaps-logo" />
+          <span className="header-text">
+            CatNapz
+          </span>
+        </div>
         <div className="container App-body">
           <p className="body-text">
             {this.state.config.blurb}
           </p>
-          {this.getProducts()}
+          <div className="products">
+            {this.getProducts()}
+          </div>
         </div>
-        <footer className="footer App-footer">
-          <p> Created By Max Waring</p>
+        <footer className="footer catnaps-footer">
+          <div >
+            <p className="footer-text"> Created By Max Waring | <span className="spin">&#169;</span> 2019</p>
+          </div>
         </footer>
       </div>
     );

@@ -1,9 +1,34 @@
-.expanded { 
-  height: 800px;
-  background: linear-gradient(#ff7788,#228855);
+.expanded {
+    transition: he 500ms;
+    flex: 800px;
 }
 
-.collapsed {
-  height: auto;
-  background: inherit;
+.card-wrapper {
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    transition: height 500ms;
+    height: 200px;
+    background: inherit;
+    background:linear-gradient( #133775, #001333);
+}
+
+.card-wrapper:active, .card-wrapper:focus {
+    background: linear-gradient(18deg, #228855,#ff7788);
+}
+
+.card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.large-card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
 }

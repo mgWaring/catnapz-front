@@ -1,5 +1,6 @@
 {
     "blurb": "Here is some body text that has some info about the brand in general. It says some stuff: Unidentified hackers were able to siphon funds from merchant accounts over six months on Amazon last year. The attack targeted about 100 accounts and transferred cash from loans and sales from merchant accounts into their own bank accounts at Barclays and Prepay Technologies. Amazon issued around $1 billion in loans in 2018, and it is unclear how much the hackers stole. Best served from a JSON object in future",
+    "logoUrl":"http://clipart-library.com/images/Big4yLgi8.png",
     "products": {
         "number1ID":{
             "title" : "one",

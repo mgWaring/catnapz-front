@@ -1,33 +1,76 @@
 .App {
-  text-align: center;
+  text-align: left;
+  background-color: #f9f9f9;
+
 }
 
-.App-logo {
+.catnaps-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 100px;
+  width: auto;
   pointer-events: none;
 }
-
-.App-header {
-  background-color: #d1c3b9;
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(17, 16, 31);
-}
-
-.App-body {
-  background-color: #f9f9f9;
+.header-text {
+  flex:2;
+  padding:0 5px;
+  font-size: 1.6em;
+  font-weight: bold;
   color: #0c0c0c;
 }
 
-.App-footer {
-  height: 200px;
-  background-color: #001333;
+.catnaps-header {
+  background: linear-gradient(177.5deg,#7a746f, #d1c3b9);
+  height: 15vh;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  padding: 0 10%;
+  color: rgb(17, 16, 31);
+  clip-path: polygon(
+    0 0, /* left top */
+    100% 0, /* right top */ 
+    100% calc(100% - 4vw), /* right bottom */
+    0 100% /* left bottom */
+  );
+}
+
+.App-body {
+  color: #0c0c0c;
+}
+
+.catnaps-footer {
+  text-align: center;
+  height: 150px;
+  padding-top: 50px;
+  border-top:2px solid #d1c3b9; 
+  background:linear-gradient(177.5deg, #133775 ,#001333);
+  font-weight: bold;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   color: #d1c3b9;
+  clip-path: polygon(
+    0 calc(0% + 4vw), /* left top */
+    100% 0, /* right top */ 
+    100% 100%, /* right bottom */
+    0 100% /* left bottom */
+  );
+}
+.footer-text {
+  flex:1;
+}
+
+.spin {
+  display: inline-block;
+  animation: App-logo-spin infinite 0.5s linear;
+  animation-play-state: paused; 
+}
+
+.spin:hover{
+  animation-play-state: running;
 }
 
 .App-link {
@@ -39,25 +82,15 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
 .body-text {
-
+  padding: 50px;
+  font-size: 1.3em;
 }
-
-.card-wrapper {
-  background: #d1c3b9;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
-}
-
-.card.card-wrapper:active, .card-wrapper:focus{
-  background: #001333;
-}
-
-.card {
-  background:#ffffff;
+.products {
+  display: flex;
+  flex-direction: column;  
 }
