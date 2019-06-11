@@ -22,7 +22,7 @@ export default class ProductTab extends PureComponent {
                     <div className="large-card">
                         <div>
                             <h2>{this.props.product.title}</h2>
-                            <img href={this.props.product.imageUrl ? this.props.product.imageUrl : 'http://placehold.it/300'}
+                            <img src={this.props.product.imageUrl ? this.props.product.imageUrl : 'http://placehold.it/300'}
                                 alt='alt text'
                             />
                         </div>
